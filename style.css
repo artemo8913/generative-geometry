@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+table{
+    border-collapse: collapse;
+}
+td{
+    border: 1px solid black;
+}
+canvas{
+    display: block;
+    border: 1px solid black;
+}
+.settings{
+    position: fixed;
+    top: 50%;
+    transform: translate(0px,-50%);
+    right: 10px;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+
+}
+input{
+    width: 15%;
+}
+.settings__list-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.settings-item__name{
+    flex-basis: 60%;
+}
