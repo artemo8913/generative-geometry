@@ -71,7 +71,7 @@ function createGeometryFigure(
     let timer = 0;
     let ants = setAmountOfAnts(amount);
     app();
-    redrawBgHard();
+    // redrawBgHard();
 
     function setAmountOfAnts(n) {
         const array = [];
