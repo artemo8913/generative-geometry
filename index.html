@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>generativeGeometry</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <canvas id="canvas"></canvas>
     <div class="settings">
-        <div class="settings__list-item settings-item">
+        <select class="settings__select" name="select"></select>
+        <button class="settings__close-btn">X</button>
+        <div class="settings__list-item">
             <span class="settings-item__name">Центральная точка (width): 0 - 1000</span>
             <input id="cw" type="range" min="0" max="1000" />
             <span></span>
@@ -23,7 +26,7 @@
         </div>
         <div class="settings__list-item">
             <span class="settings-item__name">Кол-во стартовых направлений: 1 - 360</span>
-            <input id="startDirections" type="range" min="1" max="360" />
+            <input id="startDirectionsCount" type="range" min="1" max="360" />
             <span></span>
         </div>
         <div class="settings__list-item">
@@ -33,7 +36,7 @@
         </div>
         <div class="settings__list-item">
             <span class="settings-item__name">Сдвиг между начальными направлениями (deg): 0 - 360</span>
-            <input id="spaceBetweenDeg" type="range" min="0" max="360" />
+            <input id="startAngleBetweenDeg" type="range" min="0" max="360" />
             <span></span>
         </div>
         <div class="settings__list-item">
@@ -48,22 +51,27 @@
         </div>
         <div class="settings__list-item">
             <span class="settings-item__name">Высота точки: 0 - 100</span>
-            <input id="aW" type="range" min="0" max="100" />
+            <input id="antWidth" type="range" min="0" max="100" />
             <span></span>
         </div>
         <div class="settings__list-item">
             <span class="settings-item__name">Ширина точки: 0 - 100</span>
-            <input id="aH" type="range" min="0" max="100" />
+            <input id="antHeight" type="range" min="0" max="100" />
             <span></span>
         </div>
         <div class="settings__list-item">
-            <span class="settings-item__name">Скорость точки: 0 - 50</span>
-            <input id="speed" type="range" min="0" max="50" />
+            <span class="settings-item__name">Скорость точки: 0 - 200</span>
+            <input id="speed" type="range" min="0" max="200" />
+            <span></span>
+        </div>
+        <div class="settings__list-item">
+            <span class="settings-item__name">Задержка до запуска: 0 - 500</span>
+            <input id="delayBeforeCreate" type="range" min="0" max="500" />
             <span></span>
         </div>
         <div class="settings__list-item">
             <span class="settings-item__name">Задержка перед реинкорнацией: 0 - 500</span>
-            <input id="delayBeforeCreate" type="range" min="0" max="500" />
+            <input id="delayBetweenCreate" type="range" min="0" max="500" />
             <span></span>
         </div>
         <div class="settings__list-item">
@@ -77,17 +85,18 @@
             <span></span>
         </div>
         <div class="settings__list-item">
-            <span class="settings-item__name">Расстояние, которое проходит точка перед изменением угла поворота: 0 - 100</span>
+            <span class="settings-item__name">Принудительный перезапуск прорисовки фигуры: 0 - 500</span>
+            <input id="hardResetTime" type="range" min="0" max="500" />
+            <span></span>
+        </div>
+        <div class="settings__list-item">
+            <span class="settings-item__name">Расстояние, которое проходит точка перед изменением угла поворота: 0 - 1000</span>
             <input id="stepLength" type="range" min="0" max="1000" />
             <span></span>
         </div>
     </div>
-    <script src="hex.js"></script>
-    <!-- <canvas id="c"></canvas>
-    <script src="circle.js"></script>
-    <script src="webGl.js"></script>
-    <script src="tableGraph.js"></script>
-    <script src="particles.js"></script> -->
+    <script src="generator.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
